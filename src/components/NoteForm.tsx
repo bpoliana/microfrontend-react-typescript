@@ -14,7 +14,7 @@ export interface Props {
 }
 
 
-function NoteForm(props: Props) {
+const NoteForm = (props: Props) => {
   const [title, setTitle] = React.useState( "");
   const [content, setContent] = React.useState("");
   const [isImportant, setImportance] = React.useState(props.isImportant);
@@ -73,7 +73,7 @@ function NoteForm(props: Props) {
         />
       </label>
 
-      <button type={'submit'} datatype={"submit"}> Submit
+      <button data-testid="submit" type={'submit'} datatype={"submit"}> Submit
       </button>
     </form>
   );

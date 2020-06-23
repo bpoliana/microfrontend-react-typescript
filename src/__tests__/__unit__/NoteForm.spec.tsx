@@ -22,7 +22,7 @@ function renderNoteForm(props: Partial<Props> = {}) {
 }
 
 describe("NoteForm Component", () => {
-  test("should display a black form, with importance checked", async () => {
+  test("should display a blank form, with importance checked", async () => {
     const { findByTestId } = renderNoteForm();
     const noteForm = await findByTestId("note-form");
 
@@ -75,7 +75,7 @@ describe("NoteForm Component", () => {
     fireEvent.click(importance);
     fireEvent.click(submit);
 
-    expect(onSubmit).toHaveBeenCalledWith("test", "content", true);
+    expect(onSubmit).toHaveBeenCalledWith("test", "content");
   });
 
 });
