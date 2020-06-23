@@ -1,12 +1,21 @@
 import React from 'react';
-import './App.css';
-import Note from './components/Note';
-import Button from './components/Button'
+import TextField from './components/TextField'
+import NoteForm from './components/NoteForm';
 
+
+function f() {
+  return;
+}
 function App() {
   return (
       <div>
-        <Button />
+        <NoteForm
+          isImportant={true}
+          onContentChange={f}
+          onTitleChange={f}
+          onImportanceChange={f}
+          onSubmit={f}
+        />
       </div>
   );
 }
